@@ -1,0 +1,284 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f2f5f9;
+        }
+
+        .first-row {
+            background-color: #fff;
+            height: 85px;
+        }
+
+        .second-row {
+            background-color: #f6d63b;
+            height: 59px;
+            border-bottom: 5px solid #00B4CC;
+        }
+
+        .container {
+            margin-left: 15%;
+            margin-right: 15%;
+            max-width: 1100px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .logo-img {
+            height: 75px;
+            width: 75px;
+            margin-top: 5px;
+        }
+
+        .search-bar {
+            height: 30px;
+            width: 40%;
+            border-radius: 5px 5px 5px;
+            border: 3px solid #b6b6b6;
+            outline: none;
+            color: #9DBFAF;
+            margin-left: 5%;
+            margin-top: 2.5%;
+            text-indent: 10px;
+            border-right: none;
+        }
+
+        .search-btn {
+            height: 38px;
+            margin-top: 2.5%;
+            border-radius: 0 5px 5px 0;
+            border: 1px solid #00B4CC;
+            text-align: center;
+            background: #00B4CC;
+            color: #fff;
+            cursor: pointer;
+            margin-left: -3px;
+            width: 5%;
+        }
+
+        .recipe-btn {
+            height: 38px;
+            margin-top: 2.5%;
+            border-radius: 5px 5px 5px 5px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 3.5%;
+            width: 15.5%;
+            text-decoration: none;
+        }
+
+        .recipe-span {
+            margin-top: 3%;
+        }
+
+        .position-relative {
+            position: relative;
+            bottom: 34%;
+            left: 5%;
+        }
+
+        .after-try {
+            margin-top: 1%;
+        }
+
+        .signin-btn {
+            height: 38px;
+            border-radius: 5px 5px 5px 5px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            color: #fff;
+            text-decoration: none;
+            width: 15.5%;
+            text-align: center;
+            margin-top: 2.5%;
+            margin-left: 3.5%;
+            display: flex;
+        }
+
+        .signin-icon {
+            width: 25%;
+            height: 78%;
+            padding: 4px;
+        }
+
+        .pl-3 {
+            padding-left: 3px;
+            line-height: 17px;
+            padding-top: 4px;
+        }
+
+
+        .recipe-icon {
+            width: 25%;
+            height: 78%;
+            padding: 4px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav-list {
+            margin-block-end: 0;
+            margin-block-start: 0;
+            padding-inline-start: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-icons {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 2px;
+        }
+
+        .nav-list li:nth-child(n+2) {
+            position: relative;
+            right: 25px;
+        }
+
+        .nav-list li:nth-child(3) {
+            right: 29px;
+        }
+
+        .nav-list li:nth-child(6) {
+            right: 35px;
+        }
+
+        .nav-list li:nth-child(5) {
+            right: 40px;
+        }
+
+        .nav-list li {
+            color: #490000;
+            margin-top: 5px;
+        }
+
+            .nav-list li:nth-child(n+2)::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: -20px;
+                top: -18%;
+                margin-top: -25.5px;
+                width: 1px;
+                height: 44px;
+                background-color: #e25457;
+            }
+
+        .nav-icons img:nth-child(1) {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <div class="first-row">
+                <div class="container">
+                    <div class="row">
+                        <img class="logo-img "
+                             src="https://image.freepik.com/free-vector/recipe-background_1085-797.jpg" />
+
+                        <input type="text" placeholder="Hangi tarife bakmak istersiniz ? :)" class="search-bar ">
+                        <button type="submit" class="search-btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <a href="#" class="recipe-btn">
+                            <img src="~/Content/photos/cooking.png" class="recipe-icon">
+                            <span class="position-relative">
+                                <stron>Tarif yolla </stron>
+                            </span>
+                        </a>
+                        <a href="#" class="signin-btn">
+                            <img src="~/Content/photos/user.png" class="signin-icon"><span class="pl-3">
+                                <strong>Giriş yap</strong><br> ya
+                                da
+                                üye ol
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="second-row">
+                <div class="container">
+                    <div class="nav-icons">
+                        <img src="~/Content/photos/season-colored.png" />
+                        <img src="~/Content/photos/whatto-cook.png" />
+                        <img src="~/Content/photos/trending.png" />
+                        <img src="~/Content/photos/kcal.png" />
+                        <img src="~/Content/photos/diet.png" />
+                        <img src="~/Content/photos/blogging.png" />
+                    </div>
+                    <div class="">
+                        <ul class="row nav-list">
+                            <li>Mevsimin tarifi</li>
+                            <li>Ne pişirsem ?</li>
+                            <li>Trendler</li>
+                            <li>Kaç kalori ?</li>
+                            <li>Diyet tarifleri</li>
+                            <li>Blog</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- nav bitti içerik yeri-->
+
+    <div class="content-bg"></div>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
